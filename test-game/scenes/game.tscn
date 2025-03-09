@@ -1,10 +1,12 @@
-[gd_scene load_steps=11 format=4 uid="uid://p0kk7m6rd3pe"]
+[gd_scene load_steps=13 format=4 uid="uid://p0kk7m6rd3pe"]
 
+[ext_resource type="Script" uid="uid://dxcg1r0ewumff" path="res://scripts/game_manager.gd" id="1_u5sy4"]
 [ext_resource type="PackedScene" uid="uid://bg0arqo5xtn3c" path="res://scenes/Player.tscn" id="1_us07e"]
 [ext_resource type="Texture2D" uid="uid://ghkkj1s70gtp" path="res://assets/brackeys_platformer_assets/sprites/world_tileset.png" id="2_2jcka"]
 [ext_resource type="PackedScene" uid="uid://dhdu2n5y4nwwe" path="res://scenes/coin.tscn" id="3_kl8aw"]
 [ext_resource type="PackedScene" uid="uid://c0cmdvxdlp7mc" path="res://scenes/killzone.tscn" id="4_puffl"]
 [ext_resource type="PackedScene" uid="uid://bt6upusghju50" path="res://scenes/slime.tscn" id="5_yh5rp"]
+[ext_resource type="FontFile" uid="uid://fnyka71fstsx" path="res://assets/brackeys_platformer_assets/fonts/PixelOperator8.ttf" id="6_p57ef"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8e6l6"]
 texture = ExtResource("2_2jcka")
@@ -302,6 +304,10 @@ sources/0 = SubResource("TileSetAtlasSource_a28g7")
 
 [node name="Game" type="Node2D"]
 
+[node name="GameManager" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("1_u5sy4")
+
 [node name="tile maps" type="Node2D" parent="."]
 
 [node name="BackGround" type="TileMapLayer" parent="tile maps"]
@@ -313,7 +319,8 @@ tile_map_data = PackedByteArray("AAAAAAUAAAAAAAAAAAABAAUAAAAAAAAAAAACAAUAAAAAAAA
 tile_set = SubResource("TileSet_7u5vc")
 
 [node name="Player" parent="." instance=ExtResource("1_us07e")]
-position = Vector2(8, 80)
+z_index = 1
+position = Vector2(8, 81)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(0, -8)
@@ -337,3 +344,15 @@ shape = SubResource("WorldBoundaryShape2D_r0pma")
 
 [node name="Slime" parent="." instance=ExtResource("5_yh5rp")]
 position = Vector2(231, 64)
+
+[node name="text" type="Node" parent="."]
+
+[node name="Label" type="Label" parent="text"]
+offset_left = 3.0
+offset_top = 12.0
+offset_right = 81.0
+offset_bottom = 31.0
+theme_override_fonts/font = ExtResource("6_p57ef")
+theme_override_font_sizes/font_size = 8
+text = "W and A to move
+Space to jump"
