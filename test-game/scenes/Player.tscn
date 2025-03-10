@@ -226,3 +226,9 @@ frame_progress = 1.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -6)
 shape = SubResource("CircleShape2D_h2xyu")
+
+[node name="CoyoteTimer" type="Timer" parent="."]
+wait_time = 0.17
+one_shot = true
+
+[connection signal="ready" from="." to="." method="_on_ready"]
