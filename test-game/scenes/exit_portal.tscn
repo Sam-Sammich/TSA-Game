@@ -100,7 +100,7 @@ color_initial_ramp = SubResource("Gradient_sdclj")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_lm6rn")
 autoplay = "default"
-frame_progress = 0.0452252
+frame_progress = 0.505336
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_xcxb0")
