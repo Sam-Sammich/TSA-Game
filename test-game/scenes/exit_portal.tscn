@@ -1,0 +1,85 @@
+[gd_scene load_steps=13 format=3 uid="uid://d347xkneudpg8"]
+
+[ext_resource type="Script" uid="uid://cokvisduaq2ed" path="res://scripts/exit_portal.gd" id="1_sdclj"]
+[ext_resource type="Texture2D" uid="uid://ckf4mxlfmmdf4" path="res://assets/Ship_portal_32x32.png" id="2_asl8k"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ebcv0"]
+atlas = ExtResource("2_asl8k")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s046h"]
+atlas = ExtResource("2_asl8k")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4rhwi"]
+atlas = ExtResource("2_asl8k")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y45k2"]
+atlas = ExtResource("2_asl8k")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_77xoi"]
+atlas = ExtResource("2_asl8k")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y3xid"]
+atlas = ExtResource("2_asl8k")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lw53b"]
+atlas = ExtResource("2_asl8k")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m4lcs"]
+atlas = ExtResource("2_asl8k")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lm6rn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ebcv0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s046h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4rhwi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y45k2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_77xoi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y3xid")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lw53b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m4lcs")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xcxb0"]
+radius = 12.0416
+
+[node name="Exit Portal" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_sdclj")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_lm6rn")
+autoplay = "default"
+frame_progress = 0.815203
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_xcxb0")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
