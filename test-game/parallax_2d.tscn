@@ -1,55 +1,76 @@
-[gd_scene load_steps=7 format=3 uid="uid://bxscth8qmlpxt"]
+[gd_scene load_steps=4 format=3 uid="uid://bxscth8qmlpxt"]
 
-[ext_resource type="Texture2D" uid="uid://cq84imdur1vij" path="res://assets/Blue Version/layered/blue-back.png" id="1_36wu7"]
-[ext_resource type="Texture2D" uid="uid://c4u0qtfu1t38q" path="res://assets/Blue Version/layered/blue-stars.png" id="2_2e25c"]
-[ext_resource type="Texture2D" uid="uid://cfj3hwxc08on" path="res://assets/Blue Version/layered/prop-planet-small.png" id="3_lsuk6"]
-[ext_resource type="Texture2D" uid="uid://c83inehw58fw6" path="res://assets/Blue Version/layered/prop-planet-big.png" id="4_3ppec"]
-[ext_resource type="Texture2D" uid="uid://devlnypgbthl8" path="res://assets/Blue Version/layered/asteroid-2.png" id="5_b812u"]
-[ext_resource type="Texture2D" uid="uid://d3kls443xs0co" path="res://assets/Blue Version/layered/asteroid-1.png" id="6_em5qd"]
+[ext_resource type="Texture2D" uid="uid://b4k85u2dc23s1" path="res://assets/brackeys_platformer_assets/backgrounds/background.png" id="1_cbjfi"]
+[ext_resource type="Texture2D" uid="uid://lmwabrmob1im" path="res://assets/brackeys_platformer_assets/backgrounds/middle ground.png" id="2_2e25c"]
+[ext_resource type="Texture2D" uid="uid://ci6ul4fpkm61s" path="res://assets/brackeys_platformer_assets/backgrounds/foreground.png" id="3_svkel"]
 
 [node name="Parallax2D" type="Node2D"]
 
-[node name="Parallax2D" type="Parallax2D" parent="."]
+[node name="Back Ground" type="Parallax2D" parent="."]
 scroll_scale = Vector2(0.1, 0.1)
-repeat_size = Vector2(1152, 648)
+repeat_size = Vector2(1152, 0)
 
-[node name="Blue-back" type="Sprite2D" parent="Parallax2D"]
-texture = ExtResource("1_36wu7")
+[node name="back" type="Sprite2D" parent="Back Ground"]
+z_index = -1
+position = Vector2(0, -16)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_cbjfi")
+centered = false
 
-[node name="Parallax2D2" type="Parallax2D" parent="."]
-scroll_scale = Vector2(0.15, 0.15)
-repeat_size = Vector2(1152, 648)
-
-[node name="Stars" type="Sprite2D" parent="Parallax2D2"]
-texture = ExtResource("2_2e25c")
-
-[node name="Parallax2D6" type="Parallax2D" parent="."]
-scroll_scale = Vector2(0.2, 0.2)
-repeat_size = Vector2(1152, 648)
-
-[node name="SmallPlanet" type="Sprite2D" parent="Parallax2D6"]
-position = Vector2(54, -28)
-texture = ExtResource("3_lsuk6")
-
-[node name="Parallax2D5" type="Parallax2D" parent="."]
+[node name="Mid Ground" type="Parallax2D" parent="."]
 scroll_scale = Vector2(0.3, 0.3)
-repeat_size = Vector2(1152, 648)
+repeat_size = Vector2(1152, 0)
 
-[node name="BigPlanet" type="Sprite2D" parent="Parallax2D5"]
-position = Vector2(-67, -27)
-texture = ExtResource("4_3ppec")
+[node name="mid" type="Sprite2D" parent="Mid Ground"]
+z_index = -1
+texture_filter = 1
+position = Vector2(0, -81)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_2e25c")
+centered = false
 
-[node name="Parallax2D4" type="Parallax2D" parent="."]
-scroll_scale = Vector2(0.5, 0.5)
-repeat_size = Vector2(1152, 648)
+[node name="Front Ground" type="Parallax2D" parent="."]
+repeat_size = Vector2(1152, 0)
 
-[node name="Astroid2" type="Sprite2D" parent="Parallax2D4"]
-position = Vector2(-69, 42)
-texture = ExtResource("5_b812u")
+[node name="front" type="Sprite2D" parent="Front Ground"]
+z_index = -1
+position = Vector2(0, -324)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_svkel")
+centered = false
 
-[node name="Parallax2D3" type="Parallax2D" parent="."]
-repeat_size = Vector2(1152, 648)
+[node name="Back Ground 2" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.1, 0.1)
+scroll_offset = Vector2(-576, 0)
+repeat_size = Vector2(1152, 0)
 
-[node name="astroid1" type="Sprite2D" parent="Parallax2D3"]
-position = Vector2(36, 26)
-texture = ExtResource("6_em5qd")
+[node name="back" type="Sprite2D" parent="Back Ground 2"]
+z_index = -1
+position = Vector2(0, -16)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_cbjfi")
+centered = false
+
+[node name="Mid Ground 2" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.3, 0.3)
+scroll_offset = Vector2(-576, 0)
+repeat_size = Vector2(1152, 0)
+
+[node name="mid" type="Sprite2D" parent="Mid Ground 2"]
+z_index = -1
+texture_filter = 1
+position = Vector2(0, -81)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_2e25c")
+centered = false
+
+[node name="Front Ground 2" type="Parallax2D" parent="."]
+scroll_offset = Vector2(-576, 0)
+repeat_size = Vector2(1152, 0)
+
+[node name="front" type="Sprite2D" parent="Front Ground 2"]
+z_index = -1
+position = Vector2(0, -324)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_svkel")
+centered = false
