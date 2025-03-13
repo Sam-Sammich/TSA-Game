@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dmpd5vac7vhim"]
+[gd_scene load_steps=13 format=3 uid="uid://dmpd5vac7vhim"]
 
 [ext_resource type="Script" uid="uid://dxcg1r0ewumff" path="res://scripts/game_manager.gd" id="1_8rhjg"]
 [ext_resource type="Texture2D" uid="uid://ghkkj1s70gtp" path="res://assets/brackeys_platformer_assets/sprites/world_tileset.png" id="2_krm4r"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://d347xkneudpg8" path="res://scenes/exit_portal.tscn" id="4_2v7b3"]
 [ext_resource type="PackedScene" uid="uid://bg0arqo5xtn3c" path="res://scenes/Player.tscn" id="5_6k8qy"]
 [ext_resource type="PackedScene" uid="uid://g6opc6klfn4u" path="res://scenes/pause_menu.tscn" id="6_8kvgk"]
+[ext_resource type="PackedScene" uid="uid://bxscth8qmlpxt" path="res://scenes/parallax_2d.tscn" id="7_ycc68"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_evabm"]
 texture = ExtResource("2_krm4r")
@@ -445,6 +446,8 @@ sources/0 = SubResource("TileSetAtlasSource_vm68j")
 [node name="GameManager" type="Node" parent="."]
 unique_name_in_owner = true
 script = ExtResource("1_8rhjg")
+
+[node name="Parallax2D" parent="." instance=ExtResource("7_ycc68")]
 
 [node name="tile maps" type="Node2D" parent="."]
 
