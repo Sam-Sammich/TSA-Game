@@ -16,15 +16,30 @@ position = Vector2(408, -74)
 [node name="text" type="Node" parent="." index="6"]
 
 [node name="Label" type="Label" parent="text" index="0"]
-offset_left = -9.0
-offset_top = -86.0
-offset_right = 87.0
-offset_bottom = -67.0
+offset_left = -63.0
+offset_top = -128.0
+offset_right = 52.0
+offset_bottom = -87.0
 size_flags_vertical = 1
 theme_override_fonts/font = ExtResource("2_3mhv4")
 theme_override_font_sizes/font_size = 8
-text = "W and A to move
-Space to jump"
+text = "A and D to move,
+and Space to jump 
+Bitt-The Cat!
+"
+
+[node name="Label2" type="Label" parent="text" index="1"]
+offset_left = -63.0
+offset_top = -88.0
+offset_right = 73.0
+offset_bottom = -47.0
+size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("2_3mhv4")
+theme_override_font_sizes/font_size = 8
+text = "Left Arrow and
+Right Arrow to move,
+and Up arrow to jump!
+Byte-The Dog"
 
 [node name="Bit" parent="." index="8"]
 position = Vector2(24, -32)

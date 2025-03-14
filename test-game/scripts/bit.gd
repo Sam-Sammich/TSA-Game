@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
 
-const SPEED = 130.0
-const JUMP_VELOCITY = -300.0
+const SPEED = 60.0
+const JUMP_VELOCITY = -110.0
 
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var coyote_timer: Timer = $CoyoteTimer
@@ -14,7 +14,7 @@ func _physics_process(delta: float) -> void:
 	
 	# Add the gravity and reset double jump when on ground
 	if not is_on_floor():
-		velocity += get_gravity() * delta
+		velocity += (get_gravity() * delta)/3
 	else:
 		has_double_jump = true
 	
@@ -41,16 +41,25 @@ func _physics_process(delta: float) -> void:
 	
 	
 	# Play animations
+	move_and_slide()
+	var verticalDirection = velocity.y
 	if is_on_floor():
 		if direction == 0:
-			animated_sprite.play("idle")
+			animated_sprite.play("cat idle")
 		else:
-			animated_sprite.play("run")
+			animated_sprite.play("cat run")
 	else:
 		if has_double_jump:
-			animated_sprite.play("jump")
+			animated_sprite.play("cat jump")
 		else:
-			animated_sprite.play("double jump")
+			animated_sprite.play("cat fall")
+	if verticalDirection > 0:
+		animated_sprite.play("cat fall")
+	if verticalDirection < 0:
+		animated_sprite.play("cat jump",.01, true)
+	
+	
+	
 	
 	# apply movement
 	if direction:
