@@ -5,9 +5,9 @@
 [ext_resource type="PackedScene" uid="uid://c0cmdvxdlp7mc" path="res://scenes/killzone.tscn" id="3_8n3nq"]
 [ext_resource type="Texture2D" uid="uid://n5bbg2ikvd6c" path="res://assets/Tiles.png" id="3_p71ty"]
 [ext_resource type="PackedScene" uid="uid://d347xkneudpg8" path="res://scenes/exit_portal.tscn" id="4_2v7b3"]
-[ext_resource type="PackedScene" uid="uid://bg0arqo5xtn3c" path="res://scenes/Bit.tscn" id="5_6k8qy"]
 [ext_resource type="PackedScene" uid="uid://g6opc6klfn4u" path="res://scenes/pause_menu.tscn" id="6_8kvgk"]
-[ext_resource type="PackedScene" uid="uid://daijl8uvh83p7" path="res://scenes/Byte.tscn" id="7_ycc68"]
+[ext_resource type="PackedScene" uid="uid://lsnn8ay7tqjt" path="res://scenes/bit.tscn" id="7_p71ty"]
+[ext_resource type="PackedScene" uid="uid://bniypi1rqx5iq" path="res://scenes/byte.tscn" id="8_7n0l5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_evabm"]
 texture = ExtResource("2_krm4r")
@@ -520,11 +520,11 @@ shape = SubResource("WorldBoundaryShape2D_ngfo8")
 
 [node name="PauseMenu" parent="." instance=ExtResource("6_8kvgk")]
 
-[node name="Bit" parent="." instance=ExtResource("5_6k8qy")]
+[node name="Bit" parent="." instance=ExtResource("7_p71ty")]
 
 [node name="Camera2D" type="Camera2D" parent="Bit"]
-zoom = Vector2(4, 4)
+zoom = Vector2(5, 5)
 limit_bottom = 20
-position_smoothing_enabled = true
 
-[node name="Byte" parent="." instance=ExtResource("7_ycc68")]
+[node name="Byte" parent="." instance=ExtResource("8_7n0l5")]
+position = Vector2(21, -1)

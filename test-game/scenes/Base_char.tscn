@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://3u5cs5cx5h01"]
+
+[ext_resource type="Script" uid="uid://dajwf3tym41yo" path="res://scripts/Base_char.gd" id="1_necxy"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_h2xyu"]
+radius = 6.0
+
+[node name="Base Char" type="CharacterBody2D" groups=["Player"]]
+collision_layer = 2
+script = ExtResource("1_necxy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -6)
+shape = SubResource("CircleShape2D_h2xyu")
+
+[node name="CoyoteTimer" type="Timer" parent="."]
+wait_time = 0.17
+one_shot = true
+
+[connection signal="ready" from="." to="." method="_on_ready"]

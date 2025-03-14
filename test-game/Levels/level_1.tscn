@@ -1,9 +1,37 @@
 [gd_scene load_steps=3 format=4 uid="uid://b2yt3bki45mgi"]
 
 [ext_resource type="PackedScene" uid="uid://dmpd5vac7vhim" path="res://Levels/level_base.tscn" id="1_dilhk"]
-[ext_resource type="FontFile" uid="uid://fnyka71fstsx" path="res://assets/brackeys_platformer_assets/fonts/PixelOperator8.ttf" id="2_3mhv4"]
+[ext_resource type="Theme" uid="uid://c0re1bitbft18" path="res://assets/sci-fi-theme-4/sci-fi-theme.tres" id="2_dilhk"]
 
 [node name="Level_One" instance=ExtResource("1_dilhk")]
+
+[node name="text" type="Node" parent="ColorRect" index="0"]
+
+[node name="Label" type="Label" parent="ColorRect/text" index="0"]
+offset_left = 19.0
+offset_top = -107.0
+offset_right = 134.0
+offset_bottom = -62.0
+size_flags_vertical = 1
+theme = ExtResource("2_dilhk")
+theme_override_font_sizes/font_size = 10
+text = "A and D to move,
+and Space to jump 
+Bit-The Cat!
+"
+
+[node name="Label2" type="Label" parent="ColorRect/text" index="1"]
+offset_left = -113.0
+offset_top = -107.0
+offset_right = 23.0
+offset_bottom = -62.0
+size_flags_vertical = 1
+theme = ExtResource("2_dilhk")
+theme_override_font_sizes/font_size = 10
+text = "Left Arrow and
+Right Arrow to move,
+and Up arrow to jump!
+Byte-The Dog"
 
 [node name="MidGround" parent="tile maps" index="1"]
 tile_map_data = PackedByteArray("AAAFAAEAVAAEAAYAAAAFAAAAVAAEAAUAAAAEAAEAVAADAAYAAAAEAAAAVAADAAUAAAADAAEAVAADAAYAAAADAAAAVAADAAUAAAACAAEAVAADAAYAAAACAAAAVAADAAUAAAABAAEAVAADAAYAAAABAAAAVAADAAUAAAAAAAEAVAADAAYAAAAAAAAAVAADAAUAAAD//wEAVAACAAYAAAD//wAAVAACAAUAAAAFAP//VAAEAAUAAAAFAP7/VAAEAAQAAAAEAP//VAADAAUAAAADAP//VAADAAUAAAACAP//VAADAAUAAAABAP//VAADAAUAAAAAAP//VAADAAUAAAD/////VAACAAUAAAD///7/VAACAAQAAAAOAAAAAAABAAAAAAAOAP//AAAAAAEAAAAOAP7/AAAAAAEAAAANAAAAAAAAAAEAAAANAP//AAAAAAEAAAANAP7/AAAAAAEAAAAMAAAAAAABAAEAAAAMAP//AAABAAEAAAAMAP7/AAAAAAEAAAALAAAAAAABAAEAAAALAP//AAABAAEAAAALAP7/AAAAAAEAAAAKAAAAAAAAAAEAAAAKAP//AAAAAAEAAAAKAP7/AAABAAAAAAAJAAAAAAAAAAEAAAAJAP//AAAAAAEAAAAJAP7/AAAAAAAAAAAOAP3/AAAAAAAAAAANAP3/AAAAAAAAAAAMAP3/AAAAAAAAAAALAP3/AAAAAAAAAAAKAP3/AAAAAAAAAAASAP7/AAAAAAAAAAAXAAAAAAABAAEAAAAXAP//AAAAAAAAAAAWAAAAAAAAAAEAAAAWAP//AAAAAAAAAAAVAAAAAAABAAAAAAAVAP//AAAAAAAAAAAUAAAAAAAAAAEAAAAUAP//AAAAAAAAAAATAAAAAAABAAEAAAATAP//AAABAAAAAAATAP7/AAAAAAAAAAASAAAAAAABAAAAAAASAP//AAAAAAEAAAAXAAEAAAABAAAAAAAWAAEAAAAAAAEAAAAVAAEAAAABAAEAAAAUAAEAAAAAAAEAAAATAAEAAAAAAAEAAAASAAEAAAABAAEAAAAmAAAAAAACAAEAAAAmAP//AAACAAEAAAAmAP7/AAACAAEAAAAmAP3/AAACAAEAAAAlAAAAAAACAAEAAAAlAP//AAACAAEAAAAlAP7/AAACAAEAAAAlAP3/AAACAAEAAAAkAAAAAAADAAAAAAAkAP//AAADAAEAAAAkAP7/AAADAAEAAAAkAP3/AAACAAEAAAAjAAAAAAADAAAAAAAjAP//AAACAAEAAAAjAP7/AAACAAEAAAAjAP3/AAACAAEAAAAiAAAAAAACAAEAAAAiAP//AAACAAEAAAAiAP7/AAACAAEAAAAiAP3/AAACAAEAAAAhAAAAAAACAAEAAAAhAP//AAADAAAAAAAhAP7/AAADAAAAAAAhAP3/AAACAAAAAAAgAAAAAAADAAAAAAAgAP//AAACAAEAAAAgAP7/AAADAAAAAAAgAP3/AAACAAAAAAAcAAIAAAACAAEAAAAcAAEAAAADAAAAAAAcAAAAAAACAAEAAAAcAP//AAACAAEAAAAcAP7/AAACAAIAAAAbAAIAAAACAAEAAAAbAAEAAAACAAEAAAAbAAAAAAADAAAAAAAbAP//AAADAAAAAAAbAP7/AAACAAAAAAAmAPz/AAACAAIAAAAlAPz/AAACAAAAAAAkAPz/AAACAAAAAAAjAPz/AAACAAIAAAAiAPz/AAACAAAAAAAAAP7/VAADAAQAAAABAP7/VAADAAQAAAACAP7/VAADAAQAAAADAP7/VAADAAQAAAAEAP7/VAADAAQAAAA=")
@@ -13,36 +41,8 @@ position = Vector2(408, -74)
 
 [node name="coins" type="Node" parent="." index="5"]
 
-[node name="text" type="Node" parent="." index="6"]
-
-[node name="Label" type="Label" parent="text" index="0"]
-offset_left = -63.0
-offset_top = -128.0
-offset_right = 52.0
-offset_bottom = -87.0
-size_flags_vertical = 1
-theme_override_fonts/font = ExtResource("2_3mhv4")
-theme_override_font_sizes/font_size = 8
-text = "A and D to move,
-and Space to jump 
-Bitt-The Cat!
-"
-
-[node name="Label2" type="Label" parent="text" index="1"]
-offset_left = -63.0
-offset_top = -88.0
-offset_right = 73.0
-offset_bottom = -47.0
-size_flags_vertical = 1
-theme_override_fonts/font = ExtResource("2_3mhv4")
-theme_override_font_sizes/font_size = 8
-text = "Left Arrow and
-Right Arrow to move,
-and Up arrow to jump!
-Byte-The Dog"
-
-[node name="Bit" parent="." index="8"]
+[node name="Bit" parent="." index="7"]
 position = Vector2(24, -32)
 
-[node name="Byte" parent="." index="9"]
-position = Vector2(-8, -31)
+[node name="Byte" parent="." index="8"]
+position = Vector2(-6, -32)
