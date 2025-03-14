@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cfj3hwxc08on"
-path="res://.godot/imported/prop-planet-small.png-7ac0afc455c1c33320b7b2c5c10ab8c5.ctex"
+uid="uid://c5pgo7sonlcw5"
+path="res://.godot/imported/sci-fi.png-f263648ec41a1e981ea7c16ebbf8f064.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Blue Version/layered/prop-planet-small.png"
-dest_files=["res://.godot/imported/prop-planet-small.png-7ac0afc455c1c33320b7b2c5c10ab8c5.ctex"]
+source_file="res://assets/sci-fi-theme-4/sci-fi.png"
+dest_files=["res://.godot/imported/sci-fi.png-f263648ec41a1e981ea7c16ebbf8f064.ctex"]
 
 [params]
 

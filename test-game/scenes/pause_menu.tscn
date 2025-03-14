@@ -1,24 +1,19 @@
 [gd_scene load_steps=3 format=3 uid="uid://g6opc6klfn4u"]
 
+[ext_resource type="Theme" uid="uid://c0re1bitbft18" path="res://assets/sci-fi-theme-4/sci-fi-theme.tres" id="1_myx47"]
 [ext_resource type="Script" uid="uid://bdkr6sl3xad7j" path="res://scripts/pause_menu.gd" id="1_n87rw"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uahpa"]
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
 
 [node name="PauseMenu" type="CanvasLayer"]
 
 [node name="PauseMenu" type="Control" parent="."]
 process_mode = 3
-visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_myx47")
 script = ExtResource("1_n87rw")
 
 [node name="Panel" type="PanelContainer" parent="PauseMenu"]
@@ -34,10 +29,11 @@ offset_right = 136.0
 offset_bottom = 185.5
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_uahpa")
+theme = ExtResource("1_myx47")
 
 [node name="MarginContainer" type="MarginContainer" parent="PauseMenu/Panel"]
 layout_mode = 2
+theme = ExtResource("1_myx47")
 theme_override_constants/margin_left = 20
 theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
@@ -46,11 +42,13 @@ theme_override_constants/margin_bottom = 20
 [node name="VBoxContainer" type="VBoxContainer" parent="PauseMenu/Panel/MarginContainer"]
 layout_mode = 2
 size_flags_stretch_ratio = 0.0
+theme = ExtResource("1_myx47")
 theme_override_constants/separation = 10
 
 [node name="Label" type="Label" parent="PauseMenu/Panel/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 6
+theme = ExtResource("1_myx47")
 theme_override_font_sizes/font_size = 60
 text = "PAUSED"
 horizontal_alignment = 1
@@ -58,16 +56,22 @@ horizontal_alignment = 1
 [node name="Continue" type="Button" parent="PauseMenu/Panel/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
+theme = ExtResource("1_myx47")
+theme_override_font_sizes/font_size = 20
 text = "Continue"
 
 [node name="Settings" type="Button" parent="PauseMenu/Panel/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
+theme = ExtResource("1_myx47")
+theme_override_font_sizes/font_size = 20
 text = "Settings"
 
 [node name="BackToTitle" type="Button" parent="PauseMenu/Panel/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
+theme = ExtResource("1_myx47")
+theme_override_font_sizes/font_size = 20
 text = "Back to title"
 
 [connection signal="pressed" from="PauseMenu/Panel/MarginContainer/VBoxContainer/Continue" to="PauseMenu" method="_on_continue_pressed"]
