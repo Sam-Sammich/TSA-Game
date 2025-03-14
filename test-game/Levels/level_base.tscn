@@ -1,11 +1,12 @@
-[gd_scene load_steps=12 format=3 uid="uid://dmpd5vac7vhim"]
+[gd_scene load_steps=13 format=3 uid="uid://dmpd5vac7vhim"]
 
 [ext_resource type="Script" uid="uid://dxcg1r0ewumff" path="res://scripts/game_manager.gd" id="1_8rhjg"]
 [ext_resource type="Texture2D" uid="uid://ghkkj1s70gtp" path="res://assets/brackeys_platformer_assets/sprites/world_tileset.png" id="2_krm4r"]
 [ext_resource type="PackedScene" uid="uid://c0cmdvxdlp7mc" path="res://scenes/killzone.tscn" id="3_8n3nq"]
 [ext_resource type="PackedScene" uid="uid://d347xkneudpg8" path="res://scenes/exit_portal.tscn" id="4_2v7b3"]
-[ext_resource type="PackedScene" uid="uid://bg0arqo5xtn3c" path="res://scenes/Player.tscn" id="5_6k8qy"]
+[ext_resource type="PackedScene" uid="uid://bg0arqo5xtn3c" path="res://scenes/Bit.tscn" id="5_6k8qy"]
 [ext_resource type="PackedScene" uid="uid://g6opc6klfn4u" path="res://scenes/pause_menu.tscn" id="6_8kvgk"]
+[ext_resource type="PackedScene" uid="uid://daijl8uvh83p7" path="res://scenes/Byte.tscn" id="7_ycc68"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_evabm"]
 texture = ExtResource("2_krm4r")
@@ -462,12 +463,13 @@ shape = SubResource("WorldBoundaryShape2D_ngfo8")
 
 [node name="Exit Portal" parent="." instance=ExtResource("4_2v7b3")]
 
-[node name="Player" parent="." instance=ExtResource("5_6k8qy")]
-z_index = 1
+[node name="PauseMenu" parent="." instance=ExtResource("6_8kvgk")]
 
-[node name="Camera2D" type="Camera2D" parent="Player"]
+[node name="Bit" parent="." instance=ExtResource("5_6k8qy")]
+
+[node name="Camera2D" type="Camera2D" parent="Bit"]
 zoom = Vector2(4, 4)
 limit_bottom = 20
 position_smoothing_enabled = true
 
-[node name="PauseMenu" parent="." instance=ExtResource("6_8kvgk")]
+[node name="Byte" parent="." instance=ExtResource("7_ycc68")]

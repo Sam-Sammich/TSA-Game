@@ -21,7 +21,7 @@ func _physics_process(delta: float) -> void:
 	
 
 	# Handle jump.
-	if Input.is_action_just_pressed("jump"):
+	if Input.is_action_just_pressed("Byte-Jump"):
 		if is_on_floor() or !coyote_timer.is_stopped():
 			velocity.y = JUMP_VELOCITY
 			coyote_timer.stop()
@@ -30,7 +30,7 @@ func _physics_process(delta: float) -> void:
 			has_double_jump = false
 
 	# Get the input direction and handle the movement/deceleration.
-	var direction := Input.get_axis("move_left", "move_right")
+	var direction := Input.get_axis("Byte-left", "Byte-right")
 	# face move direction
 	if direction > 0:
 		animated_sprite.flip_h = false
