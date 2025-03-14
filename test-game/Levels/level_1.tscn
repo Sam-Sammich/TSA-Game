@@ -6,10 +6,10 @@
 [node name="Level_One" instance=ExtResource("1_dilhk")]
 
 [node name="ColorRect" parent="." index="1"]
-offset_left = -304.0
-offset_top = -437.0
-offset_right = 1221.0
-offset_bottom = 91.0
+offset_left = -406.0
+offset_top = -443.0
+offset_right = 1119.0
+offset_bottom = 85.0
 
 [node name="text" type="Node" parent="ColorRect" index="0"]
 
