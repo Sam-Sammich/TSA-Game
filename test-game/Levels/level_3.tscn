@@ -638,12 +638,12 @@ position = Vector2(0, 70)
 shape = SubResource("WorldBoundaryShape2D_ngfo8")
 
 [node name="Exit Portal" parent="." instance=ExtResource("8_1yi2b")]
-position = Vector2(0, -65)
+position = Vector2(1448, -476)
 
 [node name="PauseMenu" parent="." instance=ExtResource("9_462h2")]
 
 [node name="Bit" parent="." instance=ExtResource("10_pmssq")]
-position = Vector2(-10, -45)
+position = Vector2(-31, -54)
 
 [node name="Camera2D" type="Camera2D" parent="Bit"]
 zoom = Vector2(5, 5)
