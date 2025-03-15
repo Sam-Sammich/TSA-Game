@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://bs07fqgyu7cxq"]
+
+[ext_resource type="Script" uid="uid://di3681l1ynd23" path="res://scripts/water_droplet.gd" id="1_xmmkn"]
+[ext_resource type="Texture2D" uid="uid://c2s7u8w0yfixk" path="res://assets/brackeys_platformer_assets/sprites/pipes.png" id="2_n7w21"]
+[ext_resource type="PackedScene" uid="uid://c0cmdvxdlp7mc" path="res://scenes/killzone.tscn" id="3_42csu"]
+
+[sub_resource type="GDScript" id="GDScript_xmmkn"]
+script/source = "extends \"res://scripts/killzone.gd\"
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8x2wp"]
+radius = 5.09902
+
+[node name="water droplet" type="Node2D"]
+script = ExtResource("1_xmmkn")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_n7w21")
+region_enabled = true
+region_rect = Rect2(69, 1, 16, 16)
+
+[node name="Killzone" parent="." instance=ExtResource("3_42csu")]
+collision_mask = 3
+script = SubResource("GDScript_xmmkn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
+shape = SubResource("CircleShape2D_8x2wp")
+
+[connection signal="body_entered" from="Killzone" to="." method="_on_killzone_body_entered"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://bniypi1rqx5iq"]
+[gd_scene load_steps=22 format=3 uid="uid://xavcfplfuva6"]
 
 [ext_resource type="PackedScene" uid="uid://3u5cs5cx5h01" path="res://scenes/Base_char.tscn" id="1_8fply"]
 [ext_resource type="Texture2D" uid="uid://coy57sfy0bn87" path="res://assets/brackeys_platformer_assets/sprites/bYTE.png" id="2_hq3cd"]

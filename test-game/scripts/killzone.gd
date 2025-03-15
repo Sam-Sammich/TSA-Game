@@ -3,10 +3,9 @@ extends Area2D
 @onready var timer: Timer = $Timer
 
 func _on_body_entered(body: Node2D) -> void:
-	print('u ded')
-	Engine.time_scale = 0.5
-	body.get_node("CollisionShape2D").queue_free()
-	timer.start()
+	if body.is_in_group("Player"):
+		Engine.time_scale = 0.5
+		timer.start()
 	
 
 
