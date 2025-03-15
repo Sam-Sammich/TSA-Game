@@ -169,5 +169,5 @@ input_char = "Bit-"
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="2"]
 position = Vector2(0, -18)
 sprite_frames = SubResource("SpriteFrames_e1owh")
-animation = &"jump"
+animation = &"run"
 autoplay = "idle"
