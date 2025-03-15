@@ -1,0 +1,74 @@
+[gd_scene load_steps=2 format=3 uid="uid://brhwacrb3xh5o"]
+
+[ext_resource type="Theme" uid="uid://c0re1bitbft18" path="res://assets/sci-fi-theme-4/sci-fi-theme.tres" id="1_ftfcu"]
+
+[node name="level_4" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_ftfcu")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+offset_left = 293.0
+offset_top = 301.0
+offset_right = 858.0
+offset_bottom = 346.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/PanelContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Thanks for playing!"
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Game by:"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Rita Crossman"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(5.87195e-06, 0.641438, 0.319053, 1)
+theme_override_font_sizes/font_size = 20
+text = "Sammy Seigel"
+horizontal_alignment = 1
+
+[node name="Label5" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.598721, 0.701555, 1)
+theme_override_font_sizes/font_size = 20
+text = "Ty Ziemer"
+horizontal_alignment = 1
+
+[node name="Label6" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.761989, 0.171567, 1, 1)
+theme_override_font_sizes/font_size = 20
+text = "Abby Engel"
+horizontal_alignment = 1
