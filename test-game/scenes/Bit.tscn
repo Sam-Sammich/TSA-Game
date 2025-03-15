@@ -1,7 +1,11 @@
-[gd_scene load_steps=22 format=3 uid="uid://c5v7grw5s8x3c"]
+[gd_scene load_steps=23 format=3 uid="uid://c5v7grw5s8x3c"]
 
 [ext_resource type="PackedScene" uid="uid://3u5cs5cx5h01" path="res://scenes/Base_char.tscn" id="1_m4gfq"]
 [ext_resource type="Texture2D" uid="uid://0kt8n2e58qid" path="res://assets/brackeys_platformer_assets/sprites/cat spritesheet.png" id="2_c8v1o"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gi6jt"]
+radius = 8.0
+height = 26.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lga1k"]
 atlas = ExtResource("2_c8v1o")
@@ -166,8 +170,12 @@ animations = [{
 animated_sprite = NodePath("AnimatedSprite2D")
 input_char = "Bit-"
 
+[node name="CollisionShape2D" parent="." index="0"]
+position = Vector2(0, -13)
+shape = SubResource("CapsuleShape2D_gi6jt")
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="2"]
-position = Vector2(0, -18)
+position = Vector2(1, -18)
 sprite_frames = SubResource("SpriteFrames_e1owh")
 animation = &"run"
 autoplay = "idle"

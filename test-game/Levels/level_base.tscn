@@ -9,8 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://cfnswom3fx2rl" path="res://assets/brackeys_platformer_assets/sprites/circuitry.png" id="4_4ah31"]
 [ext_resource type="Texture2D" uid="uid://c2s7u8w0yfixk" path="res://assets/brackeys_platformer_assets/sprites/pipes.png" id="4_5x0yr"]
 [ext_resource type="PackedScene" uid="uid://g6opc6klfn4u" path="res://scenes/pause_menu.tscn" id="6_8kvgk"]
-[ext_resource type="PackedScene" uid="uid://c5v7grw5s8x3c" path="res://scenes/bit.tscn" id="7_p71ty"]
-[ext_resource type="PackedScene" uid="uid://xavcfplfuva6" path="res://scenes/byte.tscn" id="8_7n0l5"]
+[ext_resource type="PackedScene" uid="uid://c5v7grw5s8x3c" path="res://scenes/Bit.tscn" id="7_p71ty"]
+[ext_resource type="PackedScene" uid="uid://xavcfplfuva6" path="res://scenes/Byte.tscn" id="8_7n0l5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_evabm"]
 texture = ExtResource("2_krm4r")
