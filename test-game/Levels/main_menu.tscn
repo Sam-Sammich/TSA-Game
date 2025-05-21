@@ -44,7 +44,7 @@ theme = SubResource("Theme_3es34")
 layout_mode = 2
 theme = ExtResource("2_jy27m")
 theme_override_font_sizes/font_size = 60
-text = "THE BEST GAME"
+text = "Bit By Byte"
 horizontal_alignment = 1
 
 [node name="HSeparator" type="HSeparator" parent="VBoxContainer"]
