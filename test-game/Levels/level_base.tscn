@@ -690,13 +690,6 @@ tile_proxies/coords_level = [[2, Vector2i(0, 0)], [83, Vector2i(0, 0)], [2, Vect
 unique_name_in_owner = true
 script = ExtResource("1_8rhjg")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-offset_left = -307.0
-offset_top = -2725.0
-offset_right = 7630.0
-offset_bottom = 74.0
-color = Color(0.635294, 0.490196, 0.372549, 1)
-
 [node name="tile maps" type="Node2D" parent="."]
 
 [node name="BackGround" type="TileMapLayer" parent="tile maps"]
@@ -725,3 +718,14 @@ limit_bottom = 20
 
 [node name="Byte" parent="." instance=ExtResource("8_7n0l5")]
 position = Vector2(14, -46)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.681133, 0.495884, 0.317236, 1)
